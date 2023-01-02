@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'me.dcal.tapelapin'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "me.dcal.tapelapin"
         minSdk 24
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
