@@ -132,27 +132,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setRat() {
-        //on utilise le hasard pour decider uqel bouton sera le bon
+        //on utilise le hasard pour decider quel bouton sera le rat
         val seed = Random()
         val PositionRat = seed.nextInt(nbAnimaux)
         val b = LstButtons!![PositionRat]
         val res = this.resources
         val myImage = ResourcesCompat.getDrawable(res, R.drawable.souris_tr, null)
         b.foreground = myImage
-        //b.setText("Rat");
     }
 
     private fun setBombe() {
 
-        //on utilise le hasard pour decider uqel bouton sera le bon
+        //on utilise le hasard pour decider quel bouton sera la bombe
         val seed = Random()
         PositionBombe = seed.nextInt(nbAnimaux)
         val b = LstButtons!![PositionBombe]
         val res = this.resources
         val myImage = ResourcesCompat.getDrawable(res, R.drawable.bombe, null)
         b.foreground = myImage
-        //Toast.makeText(getApplicationContext(),"setBombe : "+PositionBombe, Toast.LENGTH_SHORT).show();
-        //b.setText("Bombe");
     }
 
     private fun setTaupe() {
@@ -183,8 +180,21 @@ class MainActivity : AppCompatActivity() {
             Bombe = LstButtons!![PositionBombe]
         }
         if (view === Taupe) {
+            when (mode) {
+                "deb" -> {
+                    nbScore++
+                }
+                "inter" -> {
+                    nbScore+=2
+                }
+                "expert" -> {
+                    nbScore+=3
+                }
+                else -> {}
+            }
+
             //OK c'est la taupe
-            nbScore++
+
             val TextScore = findViewById<View>(R.id.score) as TextView
             TextScore.text = "Score : $nbScore"
         } else {
@@ -208,10 +218,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> {}
             }
-            //TextView TextFail = (TextView) findViewById(R.id.fail);
-            //TextFail.setText("Fail : "+nbFail);
         }
-        //Log.i("Timer Left : ", TimerLeft + "");
         if (true == isFailGame) {
             startEndActivity()
         } else {
@@ -252,6 +259,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val TEMPS_TIMER: Long = 60000 // en milliseconde soit 6 sec
+        private const val TEMPS_TIMER: Long = 60000
     }
 }
