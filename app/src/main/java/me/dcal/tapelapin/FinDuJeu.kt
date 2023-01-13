@@ -22,25 +22,20 @@ class FinDuJeu : AppCompatActivity() {
         val extras = intent.extras
 
         //BOUTON ENCORE
-
         val Encore = findViewById<Button>(R.id.buttonRetry)
         Encore.setOnClickListener {
-            //commenecr game
+            //recommencer game
             val myIntent = Intent(this@FinDuJeu, MainActivity::class.java)
             val modeI = extras!!.getString("mode")
             myIntent.putExtra("mode", modeI) //Optional parameters
             this@FinDuJeu.startActivity(myIntent)
-            //Log.i("RETOUR ","AVANNTT");
         }
 
         //BOUTON CHANGER DE NV
         val ChangerNiv = findViewById<Button>(R.id.buttonBacktoSelect)
         ChangerNiv.setOnClickListener {
-            //commenecr game
             val myIntent = Intent(this@FinDuJeu, SelectLevel::class.java)
-            //myIntent.putExtra("mode", "deb"); //Optional parameters
             this@FinDuJeu.startActivity(myIntent)
-            //Log.i("RETOUR ","AVANNTT");
         }
 
 

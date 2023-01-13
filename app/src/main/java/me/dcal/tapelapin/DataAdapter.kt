@@ -19,9 +19,9 @@ class DataAdapter(private val data: List<Score>) : RecyclerView.Adapter<DataAdap
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentData = data[position]
-        holder.textViewName.text = " ${currentData.name}"
-        holder.textViewScore.text = " ${currentData.score}"
-        holder.textViewLevel.text = " ${currentData.level}"
+        holder.textViewName.text = " ${currentData.name}"+ "    "
+        holder.textViewScore.text = "Score : " + "${currentData.score}"+ "    "
+        holder.textViewLevel.text = "Level : "+" ${currentData.level}"
         Log.w("     VALEUR ADAPTER", currentData.toString() + ' ' + data.size.toString())
 
     }override fun getItemCount(): Int {

@@ -41,7 +41,7 @@
         android:layout_width="171dp"
         android:layout_height="137dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="152dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/explain_bombe" />
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="109dp"
         android:layout_marginEnd="109dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="24dp"
         android:text="Developped by Ambre et Cédric"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,47 +88,32 @@
 
     </LinearLayout>
 
+
     <TextView
         android:id="@+id/text_view_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
-        android:text="Score: "
+        android:layout_marginStart="136dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="188dp"
+        android:text="BEST PLAYERS"
+        android:textColor="#FF5722"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/text_view_level"
-        app:layout_constraintStart_toEndOf="@+id/text_view_name" />
-
-    <TextView
-        android:id="@+id/text_view_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="102dp"
-        android:layout_marginBottom="140dp"
-        android:text="Name: "
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/text_view_level"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="140dp"
-        android:text="Level: "
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/text_view_name" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_score"
         android:layout_width="300dp"
         android:layout_height="196dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="492dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
